@@ -1,4 +1,4 @@
-/******/ const proxyurl = "https://cors-anywhere.herokuapp.com/";
+/******/  const proxyurl = "https://cors-anywhere.herokuapp.com/";
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};

@@ -9,13 +9,13 @@ canvas {
   max-width: 100%; }
 
 body {
-  background: #706d73; }
+  background: #96d4e3; }
 
 .container {
   position: relative;
   width: 100%;
   max-width: 1500px;
-  background: #706d73;
+  background: #96d4e3;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -67,24 +67,26 @@ body {
   width: 200%;
   height: 100%; }
 .container .svg .land {
-  transition: 300ms;
-  fill: #05610d;
+  transition: 150ms;
+  fill: #e8d49e;
   fill-opacity: 1;
-  stroke: #ffffff;
+  stroke: #000000;
   stroke-opacity: 1;
   stroke-width: .5; }
 .container .svg .land:hover {
   cursor: pointer;
-  fill: #056158;
-  stroke-width: 2;
-  opacity: 0.5}
+  fill: #ff8000;
+  stroke-width: 1;
+  stroke: #000000;
+  opacity: 0.6}
 .container .svg .colorFill {
-  fill: #051e61; }
+  fill: #ff8000; 
+  opacity: 0.8;}
 .container .svg .colorFill:hover {
   cursor: pointer;
-  fill: #00d5e0;
+  fill: #ff8000;
   stroke-width: 2;
-  opacity: 0.5}
+  opacity: 0.6}
 .container .information {
   position: absolute;
   transition: 1s;

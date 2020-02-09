@@ -27,7 +27,7 @@ body {
       color: black;
       border: none;
       &:focus {
-        box-shadow: 0 0 5px 1px $land-color-hover;
+        box-shadow: 0 0 5px 1px $button-color;
       }
 
     }
@@ -35,7 +35,7 @@ body {
     .error {
       &::after {
         content: 'Country not found :( ';
-        color: $land-color-active;
+        color: $button-color;
         border: 1px solid $land-color-active;
         width: 100%;
         padding: .3em;
@@ -57,6 +57,7 @@ body {
       &:hover {
         cursor: pointer;
         background: $land-color-hover;
+	opacity: 0.6;
       }
 
       &:focus {
@@ -70,16 +71,19 @@ body {
     transition: 2s;
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 665px;
+    width: 1088px;
+    height: 677px;
     .land{
       transition: 300ms;
+      stroke: #000;
+      stroke-width: .5;
       fill: $land-color;
-			fill-opacity: 1;
-			stroke: $bg-color;
-			stroke-opacity: 1;
-			stroke-width: .5;
+      fill-opacity: 1;
       &:hover {
+	stroke: #000;
+	stroke-width: 2px;
+
+	opacity: 0.6;
         cursor: pointer;
         fill: $land-color-hover;
 
@@ -88,9 +92,11 @@ body {
 
     .colorFill {
       fill: $land-color-active;
+      opacity: 0.8;
 
       &:hover {
         cursor: pointer;
+	opacity: 0.6;
         fill: $land-color-active;
       }
     }
@@ -167,3 +173,92 @@ body {
 
 
 }
+
+/* Tutaj dodajemy style POPUPa */
+
+
+.popup-inner {
+    position: absolute;
+    top: 100px;
+    width: 600px;
+    background-color: rgb(255, 255, 255);
+
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+
+
+
+
+
+/* Kombinacja klawiszy (Shift + Alt + A) - Dodaje/Usuwa komentarz (blokowy) */
+
+
+
+
+
+
+
+#popup {
+    display: block;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+#popup .popup-inner {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#popup .popup-inner img {
+    height: 200px;
+}
+
+#popup .popup-inner form input[type="email"] {
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ff7900;
+    padding: 5px;
+    width: 300px;
+
+}
+
+#popup .popup-inner form input[type="submit"], #pobierz-informator {
+    display: block;
+    margin: auto;
+    border: 1px solid #ff7900;
+    border-radius: 300px;
+    text-transform: uppercase;
+    background: #ff7900;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: 'Open Sans','Helvetica Neue', Arial,sans-serif;
+    font-weight: 700;
+
+}
+
+#popup .popup-inner form input[type="submit"]:hover, #pobierz-informator:hover {
+    background: #f5a659;
+    border: 1px solid #f5a659;
+}
+
+#pobierz-informator {
+    color: #fff;
+    text-decoration: none;
+    display: none;
+    width: 55%;
+}
+
+#pobierz-informator:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
